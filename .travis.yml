@@ -1,0 +1,32 @@
+language: node_js
+node_js:
+  - 14
+
+services:
+  - docker
+
+# Pre-testing installs
+install:
+  - echo "nothing needs to be installed"
+
+# Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+
+script:
+  - docker --version # print the version for logging
+  - docker build -t udagram-reverseproxy ./udagram-reverseproxy
+  - docker build -t udagram-frontend ./udagram-frontend
+  - docker build -t udagram-api-feed ./udagram-api-feed
+  - docker build -t udagram-api-user ./udagram-api-user
+  - docker tag udagram-reverseproxy cjs10lib/udagram-reverseproxy:v0.0.1
+  - docker tag udagram-frontend cjs10lib/udagram-frontend:v0.0.1
+  - docker tag udagram-api-feed cjs10lib/udagram-api-feed:v0.0.1
+  - docker tag udagram-api-user cjs10lib/udagram-api-user:v0.0.1
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push cjs10lib/udagram-reverseproxy:v0.0.1
+  - docker push cjs10lib/udagram-frontend:v0.0.1
+  - docker push cjs10lib/udagram-api-feed:v0.0.1
+  - docker push cjs10lib/udagram-api-user:v0.0.1
