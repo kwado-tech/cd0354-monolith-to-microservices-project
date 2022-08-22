@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: cjs10lib/udagram-frontend:0.0.1
+        image: cjs10lib/udagram-frontend:0.0.4
         imagePullPolicy: Always
         ports:
         - containerPort: 80
