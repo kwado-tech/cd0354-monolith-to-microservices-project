@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-api-user
-        image: cjs10lib/udagram-api-user:0.0.1
+        image: cjs10lib/udagram-api-user:0.0.4
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-api-feed
-        image: cjs10lib/udagram-api-feed:0.0.1
+        image: cjs10lib/udagram-api-feed:0.0.4
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
