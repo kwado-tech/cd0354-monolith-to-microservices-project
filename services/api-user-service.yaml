@@ -14,5 +14,3 @@ spec:
   selector:
     service: api-user
   type: ClusterIP
-status:
-  loadBalancer: {}
