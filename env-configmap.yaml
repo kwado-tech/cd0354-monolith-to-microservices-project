@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
   name: env-configmap
 data:
-  POSTGRES_HOST: cd0354-project-database-dev.cf9u21m27jta.us-east-2.rds.amazonaws.com
-  POSTGRES_DB: cd0354ProjectDatabase_dev
-  AWS_BUCKET: cd0354-project-305639555920-dev
+  POSTGRES_HOST: rds-cd0354-project-dev.cvrwawz4kb8d.us-east-2.rds.amazonaws.com
+  POSTGRES_DB: rds_cd0354ProjectDatabase_dev
+  AWS_BUCKET: s3-cd0354-693734966680-project
   AWS_REGION: us-east-2
   AWS_PROFILE: default
   URL: https:////localhost:8100

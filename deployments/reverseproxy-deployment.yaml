@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: cjs10lib/reverseproxy:0.0.4
+      - image: cjs10lib/reverseproxy:0.0.6
         name: reverseproxy
         imagePullPolicy: Always
         resources:
